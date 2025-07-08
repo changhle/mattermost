@@ -37,7 +37,8 @@ export default function EmojiPickerTabs(props: Props) {
             <div
                 id='emojiGifPicker'
                 ref={rootPickerNodeRef}
-                className='a11y__popup emoji-picker'
+                // className='a11y__popup emoji-picker'
+                className={`a11y__popup emoji-picker ${activeKey === 2 ? 'gif-picker-active' : ''}`}
                 role='dialog'
                 aria-label={activeKey === 1 ? intl.formatMessage({id: 'emoji_gif_picker.dialog.emojis', defaultMessage: 'Emoji Picker'}) : intl.formatMessage({id: 'emoji_gif_picker.dialog.gifs', defaultMessage: 'GIF Picker'})}
                 aria-modal='true'
@@ -91,7 +92,7 @@ export default function EmojiPickerTabs(props: Props) {
                             </div>
                         }
                         unmountOnExit={true}
-                        tabClassName={'custom-emoji-tab'}
+                        tabClassName={'custom-gif-tab'}
                     >
                         <GifPicker
                             filter={filter}

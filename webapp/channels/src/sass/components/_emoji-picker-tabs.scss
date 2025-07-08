@@ -2,6 +2,18 @@
 
 .emoji-picker {
     pointer-events: auto;
+    
+    // 기본 크기 (이모지 탭용)
+    width: 350px; // 기본 이모지 피커 크기
+    max-width: 90vw;
+    
+    // GIF 탭이 활성화된 경우에만 더 넓은 크기 적용
+    &.gif-tab-active,
+    &#emojiGifPicker {
+        width: 600px; // GIF 탭 전용 크기
+        max-width: 90vw;
+        min-width: 500px;
+    }
 
     li.custom-emoji-tab:not(.active) {
         a {
@@ -99,6 +111,66 @@
 
             flex: 1;
             flex-direction: column;
+            
+            // GIF 탭의 내용 영역 스타일
+            &[aria-labelledby="react-tabs-2"] { // GIF 탭의 패널
+                .gif-picker-items {
+                    max-height: 450px;
+                    min-height: 300px;
+                    width: 100%;
+                }
+                
+                .gif-grid {
+                    grid-template-columns: repeat(5, 1fr);
+                    gap: 12px;
+                }
+            }
+        }
+    }
+}
+
+// 반응형 디자인
+@media (max-width: 768px) {
+    .emoji-picker {
+        // 기본 크기 (이모지 탭)
+        width: 90vw;
+        max-width: 400px;
+        min-width: 300px;
+        
+        // GIF 탭 크기
+        &.gif-tab-active {
+            width: 95vw;
+            min-width: 350px;
+        }
+        
+        #emoji-picker-tabs .tab-content .tab-pane {
+            &[aria-labelledby="react-tabs-2"] {
+                .gif-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .emoji-picker {
+        // 기본 크기 (이모지 탭)
+        width: 95vw;
+        min-width: 280px;
+        
+        // GIF 탭 크기는 동일하게 유지
+        &.gif-tab-active {
+            width: 95vw;
+            min-width: 300px;
+        }
+        
+        #emoji-picker-tabs .tab-content .tab-pane {
+            &[aria-labelledby="react-tabs-2"] {
+                .gif-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
         }
     }
 }

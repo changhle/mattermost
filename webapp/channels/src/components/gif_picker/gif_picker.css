@@ -1,0 +1,245 @@
+.gif-picker-items {
+  padding: 16px;
+  /* max-height: 500px; 300px에서 400px로 증가 */
+  max-height: 60vh;
+  width: 500px;
+  max-width: 60vh;
+  overflow-y: auto;
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; /* 8px에서 12px로 증가 */
+}
+
+.gif-item {
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  aspect-ratio: 1;
+  min-height: 100px; /* 최소 높이 추가 */
+}
+
+.gif-item:hover {
+  transform: scale(1.05);
+}
+
+.gif-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gif-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.gif-item.loading {
+  position: relative;
+}
+
+.gif-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gif-item.failed {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gif-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: #f8f8f8;
+  color: #666;
+  font-size: 12px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 600px) {
+  .gif-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gif-picker-items {
+    max-height: 350px; /* 모바일에서는 조금 더 작게 */
+  }
+}
+
+@media (max-width: 400px) {
+  .gif-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gif-picker-items {
+    max-height: 300px;
+  }
+}
+
+
+/* GIF 검색 컨테이너 */
+.gif-search-container {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.gif-search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.gif-search-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.gif-search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.gif-search-input::placeholder {
+    color: #999;
+}
+
+/* Add 버튼 스타일 */
+.gif-add-button {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    background: white;
+    color: #007bff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.gif-add-button:hover:not(:disabled) {
+    background: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+.gif-add-button:disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.add-icon {
+    line-height: 1;
+    display: block;
+}
+
+.add-button-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* 검색 입력 필드에 아이콘 추가 (선택사항) */
+.gif-search-wrapper::before {
+    content: "🔍";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    color: #999;
+    z-index: 1;
+}
+
+
+
+.gif-search-input {
+    padding-left: 35px; /* 검색 아이콘 공간 확보 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+    .gif-search-wrapper {
+        gap: 6px;
+    }
+    
+    .gif-add-button {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .gif-search-input {
+        font-size: 13px;
+        padding: 6px 10px 6px 30px;
+    }
+}
+
+/* 기존 업로드 섹션 스타일 조정 */
+.gif-upload-section {
+    padding: 8px 12px; /* 패딩 줄임 */
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.upload-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px; /* 간격 줄임 */
+}
+
+.upload-info {
+    font-size: 10px; /* 폰트 크기 줄임 */
+    color: #666;
+    line-height: 1.3;
+}

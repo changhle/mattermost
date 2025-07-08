@@ -1,0 +1,96 @@
+[
+  {
+    "id": "1",
+    "title": "Happy",
+    "url": "/gifs/happy.gif",
+    "thumbnailUrl": "/gifs/thumbnails/happy.gif",
+    "tags": [
+      "happy",
+      "smile",
+      "joy"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Thumbs Up",
+    "url": "/gifs/thumbs-up.gif",
+    "thumbnailUrl": "/gifs/thumbnails/thumbs-up.gif",
+    "tags": [
+      "thumbs",
+      "up",
+      "good",
+      "approve"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Clap",
+    "url": "/gifs/clap.gif",
+    "thumbnailUrl": "/gifs/thumbnails/clap.gif",
+    "tags": [
+      "clap",
+      "applause",
+      "good job"
+    ]
+  },
+  {
+    "id": "786fd8aa-e706-4914-a3e2-4198faa66cc6",
+    "title": "walking",
+    "url": "/gifs/786fd8aa-e706-4914-a3e2-4198faa66cc6_20250707_195144.gif",
+    "thumbnailUrl": "/gifs/thumbnails/786fd8aa-e706-4914-a3e2-4198faa66cc6_20250707_195144_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  },
+  {
+    "id": "fb447665-3961-4927-ab30-991b543b2d79",
+    "title": "happy(1)",
+    "url": "/gifs/fb447665-3961-4927-ab30-991b543b2d79_20250707_195244.gif",
+    "thumbnailUrl": "/gifs/thumbnails/fb447665-3961-4927-ab30-991b543b2d79_20250707_195244_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  },
+  {
+    "id": "a5ded4d2-cbda-463b-a3c1-bc5b6a99fc00",
+    "title": "thumbs-up",
+    "url": "/gifs/a5ded4d2-cbda-463b-a3c1-bc5b6a99fc00_20250707_200422.gif",
+    "thumbnailUrl": "/gifs/thumbnails/a5ded4d2-cbda-463b-a3c1-bc5b6a99fc00_20250707_200422_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  },
+  {
+    "id": "be2ff85c-17d2-4014-bcad-f0b660514fbb",
+    "title": "hello",
+    "url": "/gifs/be2ff85c-17d2-4014-bcad-f0b660514fbb_20250708_150128.gif",
+    "thumbnailUrl": "/gifs/thumbnails/be2ff85c-17d2-4014-bcad-f0b660514fbb_20250708_150128_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  },
+  {
+    "id": "8084f67f-637f-4864-aaf3-66b590c55001",
+    "title": "clap",
+    "url": "/gifs/8084f67f-637f-4864-aaf3-66b590c55001_20250708_152317.gif",
+    "thumbnailUrl": "/gifs/thumbnails/8084f67f-637f-4864-aaf3-66b590c55001_20250708_152317_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  },
+  {
+    "id": "d975d5c2-53ba-4a56-87d6-83e2e0a03d81",
+    "title": "hello",
+    "url": "/gifs/d975d5c2-53ba-4a56-87d6-83e2e0a03d81_20250708_152539.gif",
+    "thumbnailUrl": "/gifs/thumbnails/d975d5c2-53ba-4a56-87d6-83e2e0a03d81_20250708_152539_thumb.gif",
+    "tags": [
+      "uploaded",
+      "custom"
+    ]
+  }
+]
