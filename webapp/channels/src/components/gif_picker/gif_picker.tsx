@@ -9,7 +9,8 @@ import React, {
     useEffect,
     useRef,
 } from "react";
-
+import { getCurrentUser } from "mattermost-redux/selectors/entities/users";
+import store from 'stores/redux_store';
 import "./gif_picker.css"; // CSS 파일 import
 
 import GifPickerItems from "./components/gif_picker_items";
@@ -56,14 +57,21 @@ type Props = {
 // GIF API 클라이언트 클래스
 class GifApiClient {
     private baseUrl: string;
+    private userId?: string;
 
-    constructor(baseUrl: string = API_BASE_URL) {
+    constructor(baseUrl: string = API_BASE_URL, userId?: any) {
         this.baseUrl = baseUrl;
+        this.userId = userId;
     }
 
     async getGifs(): Promise<ApiResponse<LocalGif[]>> {
         try {
-            const response = await fetch(`${this.baseUrl}/gifs`);
+            const url = this.userId
+                ? `${this.baseUrl}/gifs?userId=${encodeURIComponent(
+                      this.userId
+                  )}`
+                : `${this.baseUrl}/gifs`;
+            const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -89,6 +97,7 @@ class GifApiClient {
                 title,
                 tags,
                 base64_data: base64Data,
+                ...(this.userId && { userId: this.userId }), // body에 userId 포함
             };
 
             const response = await fetch(`${this.baseUrl}/gifs`, {
@@ -115,14 +124,17 @@ class GifApiClient {
 
     async deleteGif(gifId: string): Promise<ApiResponse<LocalGif>> {
         try {
-            const response = await fetch(`${this.baseUrl}/gifs/${gifId}`, {
+            const url = this.userId
+                ? `${this.baseUrl}/gifs/${gifId}?userId=${encodeURIComponent(
+                      this.userId
+                  )}`
+                : `${this.baseUrl}/gifs/${gifId}`;
+            const response = await fetch(url, {
                 method: "DELETE",
             });
-
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
             return await response.json();
         } catch (error) {
             console.error("GIF 삭제 실패:", error);
@@ -135,8 +147,12 @@ class GifApiClient {
 
     async searchGifs(query: string): Promise<ApiResponse<LocalGif[]>> {
         try {
+            const params = new URLSearchParams({
+                q: query,
+                ...(this.userId && { userId: this.userId }),
+            });
             const response = await fetch(
-                `${this.baseUrl}/gifs/search?q=${encodeURIComponent(query)}`
+                `${this.baseUrl}/gifs/search?${params}`
             );
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -165,8 +181,23 @@ class GifApiClient {
     }
 }
 
+function getUserIdentifier(store: any): string | null {
+    try {
+        const currentUser = getCurrentUser(store.getState());
+        // username(닉네임)을 사용자 식별자로 사용
+        return currentUser?.username || null;
+    } catch (error) {
+        console.error("사용자 정보 가져오기 실패:", error);
+        return null;
+    }
+}
+
+// 사용 예시
+const userId = getUserIdentifier(store);
+// const currentUser = getCurrentUser(store.getState());
+// const userId = currentUser?.id;
 // 싱글톤 API 클라이언트 인스턴스
-const gifApiClient = new GifApiClient();
+const gifApiClient = new GifApiClient(API_BASE_URL, userId);
 
 const GifPicker = (props: Props) => {
     const [serverGifs, setServerGifs] = useState<LocalGif[]>([]);
