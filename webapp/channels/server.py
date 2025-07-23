@@ -329,8 +329,8 @@ CORS(app)  # CORS 설정 (프론트엔드와 연결을 위해)
 
 # 설정
 JSON_FILE_PATH = 'users_gifs.json'
-GIF_DIRECTORY = './public/gifs'
-THUMBNAIL_DIRECTORY = './public/gifs/thumbnails'
+GIF_DIRECTORY = '/opt/mattermost/client/gifs'
+THUMBNAIL_DIRECTORY = '/opt/mattermost/client/gifs/thumbnails'
 
 # 디렉토리 생성
 os.makedirs(GIF_DIRECTORY, exist_ok=True)
@@ -361,22 +361,22 @@ DEFAULT_LOCAL_GIFS = [
     {
         'id': '1',
         'title': 'Happy',
-        'url': '/gifs/happy.gif',
-        'thumbnailUrl': '/gifs/thumbnails/happy.gif',
+        'url': '/static/gifs/happy.gif',
+        'thumbnailUrl': '/static/gifs/thumbnails/happy.gif',
         'tags': ['happy', 'smile', 'joy']
     },
     {
         'id': '2',
         'title': 'Thumbs Up',
-        'url': '/gifs/thumbs-up.gif',
-        'thumbnailUrl': '/gifs/thumbnails/thumbs-up.gif',
+        'url': '/static/gifs/thumbs-up.gif',
+        'thumbnailUrl': '/static/gifs/thumbnails/thumbs-up.gif',
         'tags': ['thumbs', 'up', 'good', 'approve']
     },
     {
         'id': '3',
         'title': 'Clap',
-        'url': '/gifs/clap.gif',
-        'thumbnailUrl': '/gifs/thumbnails/clap.gif',
+        'url': '/static/gifs/clap.gif',
+        'thumbnailUrl': '/static/gifs/thumbnails/clap.gif',
         'tags': ['clap', 'applause', 'good job']
     }
 ]
@@ -539,8 +539,8 @@ def add_gif():
         new_gif = {
             'id': gif_id,
             'title': data['title'],
-            'url': f'/gifs/{filename}' if 'base64_data' in data else data.get('url', ''),
-            'thumbnailUrl': f'/gifs/thumbnails/{thumbnail_filename}' if 'base64_data' in data else data.get('thumbnailUrl', ''),
+            'url': f'/static/gifs/{filename}' if 'base64_data' in data else data.get('url', ''),
+            'thumbnailUrl': f'/static/gifs/thumbnails/{thumbnail_filename}' if 'base64_data' in data else data.get('thumbnailUrl', ''),
             'tags': data['tags'],
             'userId': user_id
         }
