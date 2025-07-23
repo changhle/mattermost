@@ -2,17 +2,28 @@
 
 .emoji-picker {
     pointer-events: auto;
+    position: relative;
     
     // 기본 크기 (이모지 탭용)
-    width: 350px; // 기본 이모지 피커 크기
+    width: 350px;
     max-width: 90vw;
     
-    // GIF 탭이 활성화된 경우에만 더 넓은 크기 적용
-    &.gif-tab-active,
-    &#emojiGifPicker {
-        width: 600px; // GIF 탭 전용 크기
+    // GIF 탭이 활성화된 경우
+    &.gif-picker-active {
+        width: 600px;
         max-width: 90vw;
         min-width: 500px;
+        
+        // 왼쪽으로 확장되도록 transform 사용
+        transform: translateX(-250px); // 너비 차이만큼 왼쪽으로 이동 (600-350=250)
+    }
+    
+    // 이모지 탭은 기본 크기 유지
+    &:not(.gif-picker-active) {
+        width: 350px;
+        max-width: 90vw;
+        min-width: 300px;
+        transform: translateX(0); // 기본 위치
     }
 
     li.custom-emoji-tab:not(.active) {
@@ -56,16 +67,32 @@
             }
         }
     }
+    
+    // 부드러운 전환 애니메이션
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
 
     .nav.nav-tabs {
         width: fit-content;
         width: -moz-fit-content;
+        
+        // 탭 버튼들을 오른쪽으로 정렬
+        justify-content: flex-end;
+        margin-left: auto;
+        
+        // Flexbox로 탭 정렬
+        display: flex;
+        flex-direction: row;
     }
 }
 
 .emoji-picker-overlay {
     z-index: variables.$z-index-popover;
     pointer-events: none;
+    
+    // 패널 위치 조정을 위한 Flexbox 설정
+    display: flex;
+    justify-content: flex-end; // 오른쪽 끝에 정렬
+    align-items: flex-start;
 }
 
 .custom-emoji-tab__icon__text {
@@ -88,7 +115,8 @@
 
     // These prevent a flex element from overflowing its parent
     min-width: 0;
-    min-height: 0;
+    // min-height: 0;
+    height: 500px;
 
     flex: 1;
     flex-direction: column;
@@ -113,16 +141,44 @@
             flex-direction: column;
             
             // GIF 탭의 내용 영역 스타일
-            &[aria-labelledby="react-tabs-2"] { // GIF 탭의 패널
-                .gif-picker-items {
-                    max-height: 450px;
-                    min-height: 300px;
-                    width: 100%;
+            &[aria-labelledby="emoji-picker-tabs-tab-2"] { // GIF 탭의 패널
+                // 고정 높이 설정으로 스크롤바 바로 생성
+                // max-height: 400px; // 고정 최대 높이
+                // width: 600px; // GIF 탭의 너비
+                overflow-y: auto; // 세로 스크롤 활성화
+                overflow-x: hidden; // 가로 스크롤 숨김
+                
+                // 스크롤바 스타일링 (웹킷 기반 브라우저)
+                &::-webkit-scrollbar {
+                    width: 8px;
                 }
                 
+                &::-webkit-scrollbar-track {
+                    background: rgba(var(--center-channel-color-rgb), 0.08);
+                    border-radius: 4px;
+                }
+                
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(var(--center-channel-color-rgb), 0.24);
+                    border-radius: 4px;
+                    
+                    &:hover {
+                        background: rgba(var(--center-channel-color-rgb), 0.32);
+                    }
+                }
+                
+                .gif-picker-items {
+                    width: 100% !important; // 인라인 스타일 덮어쓰기
+                    max-width: 100%;
+                    padding: 6px;
+                    box-sizing: border-box;
+                }
+
                 .gif-grid {
-                    grid-template-columns: repeat(5, 1fr);
-                    gap: 12px;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 8px;
+                    // padding: 6px; // 스크롤바와의 여백
+                    width: 100%; // 그리드 너비를 100%로 설정
                 }
             }
         }
@@ -132,22 +188,44 @@
 // 반응형 디자인
 @media (max-width: 768px) {
     .emoji-picker {
-        // 기본 크기 (이모지 탭)
-        width: 90vw;
-        max-width: 400px;
-        min-width: 300px;
-        
-        // GIF 탭 크기
-        &.gif-tab-active {
-            width: 95vw;
-            min-width: 350px;
+        // 이모지 탭 크기
+        &:not(.gif-picker-active) {
+            width: 90vw;
+            max-width: 400px;
+            min-width: 300px;
+            transform: translateX(0); // 모바일에서는 이동 없음
         }
         
-        #emoji-picker-tabs .tab-content .tab-pane {
-            &[aria-labelledby="react-tabs-2"] {
-                .gif-grid {
-                    grid-template-columns: repeat(3, 1fr);
-                }
+        // GIF 탭 크기
+        &.gif-picker-active {
+            width: 95vw;
+            max-width: 500px;
+            min-width: 350px;
+            transform: translateX(0); // 모바일에서는 이동 없음 (공간 부족)
+        }
+        
+        // 모바일에서는 탭을 중앙 정렬로 변경 (공간 절약)
+        .nav.nav-tabs {
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+    
+    #emoji-picker-tabs .tab-content .tab-pane {
+        &[aria-labelledby="emoji-picker-tabs-tab-2"] {
+            max-height: 350px; // 모바일에서 높이 조정
+            
+            .gif-picker-items {
+                width: 100% !important; // 인라인 스타일 덮어쓰기
+                max-width: 100%;
+                padding: 6px;
+                box-sizing: border-box;
+            }
+
+            .gif-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+                // padding: 6px;
             }
         }
     }
@@ -155,21 +233,43 @@
 
 @media (max-width: 480px) {
     .emoji-picker {
-        // 기본 크기 (이모지 탭)
-        width: 95vw;
-        min-width: 280px;
-        
-        // GIF 탭 크기는 동일하게 유지
-        &.gif-tab-active {
+        // 이모지 탭 크기
+        &:not(.gif-picker-active) {
             width: 95vw;
-            min-width: 300px;
+            max-width: 350px;
+            min-width: 280px;
+            transform: translateX(0);
         }
         
-        #emoji-picker-tabs .tab-content .tab-pane {
-            &[aria-labelledby="react-tabs-2"] {
-                .gif-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                }
+        // GIF 탭 크기
+        &.gif-picker-active {
+            width: 95vw;
+            max-width: 400px;
+            min-width: 300px;
+            transform: translateX(0);
+        }
+        
+        // 작은 화면에서도 중앙 정렬 유지
+        .nav.nav-tabs {
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+    
+    #emoji-picker-tabs .tab-content .tab-pane {
+        &[aria-labelledby="emoji-picker-tabs-tab-2"] {
+            max-height: 300px; // 작은 화면에서 높이 더 줄임
+            .gif-picker-items {
+                width: 100% !important; // 인라인 스타일 덮어쓰기
+                max-width: 100%;
+                padding: 4px;
+                box-sizing: border-box;
+            }
+            
+            .gif-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                // padding: 4px;
             }
         }
     }
