@@ -164,5 +164,94 @@
       ],
       "userId": "lch"
     }
+  ],
+  "test": [
+    {
+      "id": "1",
+      "title": "Happy",
+      "url": "/static/gifs/happy.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
+      "tags": [
+        "happy",
+        "smile",
+        "joy"
+      ],
+      "userId": "test"
+    },
+    {
+      "id": "2",
+      "title": "Thumbs Up",
+      "url": "/static/gifs/thumbs-up.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
+      "tags": [
+        "thumbs",
+        "up",
+        "good",
+        "approve"
+      ],
+      "userId": "test"
+    },
+    {
+      "id": "3",
+      "title": "Clap",
+      "url": "/static/gifs/clap.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
+      "tags": [
+        "clap",
+        "applause",
+        "good job"
+      ],
+      "userId": "test"
+    }
+  ],
+  "daeun": [
+    {
+      "id": "1",
+      "title": "Happy",
+      "url": "/static/gifs/happy.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
+      "tags": [
+        "happy",
+        "smile",
+        "joy"
+      ],
+      "userId": "daeun"
+    },
+    {
+      "id": "2",
+      "title": "Thumbs Up",
+      "url": "/static/gifs/thumbs-up.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
+      "tags": [
+        "thumbs",
+        "up",
+        "good",
+        "approve"
+      ],
+      "userId": "daeun"
+    },
+    {
+      "id": "3",
+      "title": "Clap",
+      "url": "/static/gifs/clap.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
+      "tags": [
+        "clap",
+        "applause",
+        "good job"
+      ],
+      "userId": "daeun"
+    },
+    {
+      "id": "be2bda6f-5709-4849-8819-c99c3f61f842",
+      "title": "gun",
+      "url": "/static/gifs/daeun_be2bda6f-5709-4849-8819-c99c3f61f842_20250725_151508.gif",
+      "thumbnailUrl": "/static/gifs/thumbnails/daeun_be2bda6f-5709-4849-8819-c99c3f61f842_20250725_151508_thumb.gif",
+      "tags": [
+        "uploaded",
+        "custom"
+      ],
+      "userId": "daeun"
+    }
   ]
 }

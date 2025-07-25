@@ -21,7 +21,7 @@ const GIF_MARGIN_ENDS = 12;
 
 // 서버 API 설정
 const API_BASE_URL =
-    process.env.REACT_APP_GIF_API_URL || "http://localhost:5000";
+    process.env.REACT_APP_GIF_API_URL || "http://chlee.postech.ac.kr:5000";
 
 // 로컬 GIF 데이터 타입 정의
 type LocalGif = {
