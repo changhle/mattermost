@@ -357,29 +357,7 @@ class LocalGif:
         }
 
 # 기본 GIF 데이터 (각 사용자마다 초기화됨)
-DEFAULT_LOCAL_GIFS = [
-    {
-        'id': '1',
-        'title': 'Happy',
-        'url': '/static/gifs/happy.gif',
-        'thumbnailUrl': '/static/gifs/thumbnails/happy.gif',
-        'tags': ['happy', 'smile', 'joy']
-    },
-    {
-        'id': '2',
-        'title': 'Thumbs Up',
-        'url': '/static/gifs/thumbs-up.gif',
-        'thumbnailUrl': '/static/gifs/thumbnails/thumbs-up.gif',
-        'tags': ['thumbs', 'up', 'good', 'approve']
-    },
-    {
-        'id': '3',
-        'title': 'Clap',
-        'url': '/static/gifs/clap.gif',
-        'thumbnailUrl': '/static/gifs/thumbnails/clap.gif',
-        'tags': ['clap', 'applause', 'good job']
-    }
-]
+DEFAULT_LOCAL_GIFS = []
 
 def load_users_gifs() -> Dict[str, List[Dict[str, Any]]]:
     """JSON 파일에서 사용자별 GIF 목록을 로드"""
@@ -823,7 +801,7 @@ if __name__ == '__main__':
     print("🎬 사용자별 GIF 관리 서버 시작...")
     print("📁 GIF 디렉토리:", GIF_DIRECTORY)
     print("📄 JSON 파일:", JSON_FILE_PATH)
-    print("🌐 서버 주소: http://localhost:5000")
+    print("🌐 서버 주소: http://chlee.postech.ac.kr:5000")
     print("\n사용 가능한 엔드포인트:")
     print("  GET    /gifs?userId=<id>              - 사용자별 GIF 목록 조회")
     print("  POST   /gifs                          - 사용자별 GIF 추가 (userId 필요)")
