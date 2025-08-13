@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
 user_id = sys.argv[1].strip()
 gifs_src_dir = user_id  # 입력받은 사용자 이름 폴더
 dest_gifs_dir = "/opt/mattermost/client/gifs"
-dest_thumbs_dir = "/opt/mattermost/client/gifs/thumbnails"
+# dest_thumbs_dir = "/opt/mattermost/client/gifs/thumbnails"
 json_file = "users_gifs.json"
 
 # 폴더 확인
@@ -22,7 +22,7 @@ if not os.path.isdir(gifs_src_dir):
     sys.exit(1)
 
 os.makedirs(dest_gifs_dir, exist_ok=True)
-os.makedirs(dest_thumbs_dir, exist_ok=True)
+# os.makedirs(dest_thumbs_dir, exist_ok=True)
 
 # 기존 JSON 불러오기
 if os.path.exists(json_file):
@@ -49,7 +49,7 @@ for gif_file in gif_files:
 
     # 복사
     shutil.copy2(src_path, os.path.join(dest_gifs_dir, new_filename))
-    shutil.copy2(src_path, os.path.join(dest_thumbs_dir, new_thumb_filename))
+    # shutil.copy2(src_path, os.path.join(dest_gifs_dir, new_thumb_filename))
 
     # JSON 데이터 생성
     gif_entry = {

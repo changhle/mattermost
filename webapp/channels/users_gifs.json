@@ -1,69 +1,10 @@
 {
   "chlee0811": [
     {
-      "id": "1",
-      "title": "Happy",
-      "url": "/static/gifs/happy.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
-      "tags": [
-        "happy",
-        "smile",
-        "joy"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "2",
-      "title": "Thumbs Up",
-      "url": "/static/gifs/thumbs-up.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
-      "tags": [
-        "thumbs",
-        "up",
-        "good",
-        "approve"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "3",
-      "title": "Clap",
-      "url": "/static/gifs/clap.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
-      "tags": [
-        "clap",
-        "applause",
-        "good job"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "4b9b80d1-03a5-490f-a282-2d49d1e0d5e0",
-      "title": "scream",
-      "url": "/static/gifs/chlee0811_4b9b80d1-03a5-490f-a282-2d49d1e0d5e0_20250723_180745.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_4b9b80d1-03a5-490f-a282-2d49d1e0d5e0_20250723_180745_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "b4edbe76-d901-4f9e-800b-ca78194cbefd",
-      "title": "walking",
-      "url": "/static/gifs/chlee0811_b4edbe76-d901-4f9e-800b-ca78194cbefd_20250723_180745.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_b4edbe76-d901-4f9e-800b-ca78194cbefd_20250723_180745_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "1fbd4e6c-4197-400c-b22e-db12fb96ccc0",
+      "id": "a592c3c6-7f73-4db0-896f-781e3b767c94",
       "title": "hello",
-      "url": "/static/gifs/chlee0811_1fbd4e6c-4197-400c-b22e-db12fb96ccc0_20250723_181103.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_1fbd4e6c-4197-400c-b22e-db12fb96ccc0_20250723_181103_thumb.gif",
+      "url": "/gifs/chlee0811/a592c3c6-7f73-4db0-896f-781e3b767c94_20250813_141931.gif",
+      "thumbnailUrl": "/gifs/chlee0811/a592c3c6-7f73-4db0-896f-781e3b767c94_20250813_141931.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -71,10 +12,10 @@
       "userId": "chlee0811"
     },
     {
-      "id": "22b16f7c-63f5-4e9a-9a48-0a738c92fad1",
-      "title": "scream",
-      "url": "/static/gifs/chlee0811_22b16f7c-63f5-4e9a-9a48-0a738c92fad1_20250723_181103.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_22b16f7c-63f5-4e9a-9a48-0a738c92fad1_20250723_181103_thumb.gif",
+      "id": "0ff68c14-3de8-447f-829c-b64b0d26426e",
+      "title": "hello",
+      "url": "/gifs/chlee0811/0ff68c14-3de8-447f-829c-b64b0d26426e_20250813_141952.gif",
+      "thumbnailUrl": "/gifs/chlee0811/0ff68c14-3de8-447f-829c-b64b0d26426e_20250813_141952.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -82,10 +23,10 @@
       "userId": "chlee0811"
     },
     {
-      "id": "8338bca0-1e0c-4011-a5c2-184bce4c6cfb",
+      "id": "34fc0be1-59fb-4c61-9989-0c3e82c05542",
       "title": "happy",
-      "url": "/static/gifs/chlee0811_8338bca0-1e0c-4011-a5c2-184bce4c6cfb_20250723_181103.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_8338bca0-1e0c-4011-a5c2-184bce4c6cfb_20250723_181103_thumb.gif",
+      "url": "/gifs/chlee0811/34fc0be1-59fb-4c61-9989-0c3e82c05542_20250813_141956.gif",
+      "thumbnailUrl": "/gifs/chlee0811/34fc0be1-59fb-4c61-9989-0c3e82c05542_20250813_141956.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -93,10 +34,21 @@
       "userId": "chlee0811"
     },
     {
-      "id": "bf629c40-f585-4604-ab8f-4be1dabead73",
+      "id": "229401cb-3888-4f0d-b7a9-ce3cb2f4e25b",
+      "title": "scream",
+      "url": "/gifs/chlee0811/229401cb-3888-4f0d-b7a9-ce3cb2f4e25b_20250813_142015.gif",
+      "thumbnailUrl": "/gifs/chlee0811/229401cb-3888-4f0d-b7a9-ce3cb2f4e25b_20250813_142015.gif",
+      "tags": [
+        "uploaded",
+        "custom"
+      ],
+      "userId": "chlee0811"
+    },
+    {
+      "id": "ae3e92c3-4493-442c-b268-8a38f4c5ea58",
       "title": "clap",
-      "url": "/static/gifs/chlee0811_bf629c40-f585-4604-ab8f-4be1dabead73_20250723_181103.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_bf629c40-f585-4604-ab8f-4be1dabead73_20250723_181103_thumb.gif",
+      "url": "/gifs/chlee0811/ae3e92c3-4493-442c-b268-8a38f4c5ea58_20250813_142015.gif",
+      "thumbnailUrl": "/gifs/chlee0811/ae3e92c3-4493-442c-b268-8a38f4c5ea58_20250813_142015.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -104,10 +56,32 @@
       "userId": "chlee0811"
     },
     {
-      "id": "19e006c0-7b3b-464e-855b-71a50260cfd3",
+      "id": "eeecaf44-6ce4-4941-b0ae-6c9bea50cfa8",
+      "title": "scream",
+      "url": "/gifs/chlee0811/eeecaf44-6ce4-4941-b0ae-6c9bea50cfa8_20250813_143003.gif",
+      "thumbnailUrl": "/gifs/chlee0811/eeecaf44-6ce4-4941-b0ae-6c9bea50cfa8_20250813_143003.gif",
+      "tags": [
+        "uploaded",
+        "custom"
+      ],
+      "userId": "chlee0811"
+    },
+    {
+      "id": "b7bc66e4-1181-48e4-8ef5-5128e9f2318f",
+      "title": "happy",
+      "url": "/gifs/chlee0811/b7bc66e4-1181-48e4-8ef5-5128e9f2318f_20250813_143003.gif",
+      "thumbnailUrl": "/gifs/chlee0811/b7bc66e4-1181-48e4-8ef5-5128e9f2318f_20250813_143003.gif",
+      "tags": [
+        "uploaded",
+        "custom"
+      ],
+      "userId": "chlee0811"
+    },
+    {
+      "id": "c146ab48-7467-4d04-84fa-5fdad359b929",
       "title": "thumbs-up",
-      "url": "/static/gifs/chlee0811_19e006c0-7b3b-464e-855b-71a50260cfd3_20250723_181104.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_19e006c0-7b3b-464e-855b-71a50260cfd3_20250723_181104_thumb.gif",
+      "url": "/gifs/chlee0811/c146ab48-7467-4d04-84fa-5fdad359b929_20250813_143003.gif",
+      "thumbnailUrl": "/gifs/chlee0811/c146ab48-7467-4d04-84fa-5fdad359b929_20250813_143003.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -115,10 +89,10 @@
       "userId": "chlee0811"
     },
     {
-      "id": "aac64e73-a4d4-43db-8cb8-3f05480f56f0",
+      "id": "3b28be95-7e1f-4b92-a97a-ee587a5d5a69",
       "title": "walking",
-      "url": "/static/gifs/chlee0811_aac64e73-a4d4-43db-8cb8-3f05480f56f0_20250723_181104.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_aac64e73-a4d4-43db-8cb8-3f05480f56f0_20250723_181104_thumb.gif",
+      "url": "/gifs/chlee0811/3b28be95-7e1f-4b92-a97a-ee587a5d5a69_20250813_143120.gif",
+      "thumbnailUrl": "/gifs/chlee0811/3b28be95-7e1f-4b92-a97a-ee587a5d5a69_20250813_143120.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -126,10 +100,10 @@
       "userId": "chlee0811"
     },
     {
-      "id": "37cd6bee-6fcc-438b-8ee5-31dd24e59709",
+      "id": "42594b2c-fbe0-4771-b5a0-7224f7836422",
       "title": "clap",
-      "url": "/static/gifs/chlee0811_37cd6bee-6fcc-438b-8ee5-31dd24e59709_20250812_171217.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_37cd6bee-6fcc-438b-8ee5-31dd24e59709_20250812_171217_thumb.gif",
+      "url": "/gifs/chlee0811/42594b2c-fbe0-4771-b5a0-7224f7836422_20250813_143251.gif",
+      "thumbnailUrl": "/gifs/chlee0811/42594b2c-fbe0-4771-b5a0-7224f7836422_20250813_143251.gif",
       "tags": [
         "uploaded",
         "custom"
@@ -137,187 +111,15 @@
       "userId": "chlee0811"
     },
     {
-      "id": "3e1ee442-0553-4ac7-88f3-6415eb53706b",
-      "title": "happy",
-      "url": "/static/gifs/chlee0811_3e1ee442-0553-4ac7-88f3-6415eb53706b_20250812_171231.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_3e1ee442-0553-4ac7-88f3-6415eb53706b_20250812_171231_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "259bab85-2b60-4757-a182-90553a7f6190",
-      "title": "clap",
-      "url": "/static/gifs/chlee0811_259bab85-2b60-4757-a182-90553a7f6190_20250812_171231.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_259bab85-2b60-4757-a182-90553a7f6190_20250812_171231_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "707c967d-1c8f-4a44-8dbb-2fccb9b9ab52",
-      "title": "thumbs-up",
-      "url": "/static/gifs/chlee0811_707c967d-1c8f-4a44-8dbb-2fccb9b9ab52_20250812_171231.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_707c967d-1c8f-4a44-8dbb-2fccb9b9ab52_20250812_171231_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    },
-    {
-      "id": "62c3f427-0273-46c9-a620-04e323b7b75f",
+      "id": "chlee0811_scream_20250813_143436",
       "title": "scream",
-      "url": "/static/gifs/chlee0811_62c3f427-0273-46c9-a620-04e323b7b75f_20250812_172238.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/chlee0811_62c3f427-0273-46c9-a620-04e323b7b75f_20250812_172238_thumb.gif",
+      "url": "/gifs/chlee0811/chlee0811_scream_20250813_143436.gif",
+      "thumbnailUrl": "/gifs/chlee0811/chlee0811_scream_20250813_143436.gif",
       "tags": [
         "uploaded",
         "custom"
       ],
       "userId": "chlee0811"
-    },
-    {
-      "id": "62c3f427-0273-46c9-af",
-      "title": "scream",
-      "url": "/static/gifs/clap_cpy.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/clap_cpy.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "chlee0811"
-    }
-  ],
-  "lch": [
-    {
-      "id": "1",
-      "title": "Happy",
-      "url": "/static/gifs/happy.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
-      "tags": [
-        "happy",
-        "smile",
-        "joy"
-      ],
-      "userId": "lch"
-    },
-    {
-      "id": "2",
-      "title": "Thumbs Up",
-      "url": "/static/gifs/thumbs-up.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
-      "tags": [
-        "thumbs",
-        "up",
-        "good",
-        "approve"
-      ],
-      "userId": "lch"
-    },
-    {
-      "id": "3",
-      "title": "Clap",
-      "url": "/static/gifs/clap.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
-      "tags": [
-        "clap",
-        "applause",
-        "good job"
-      ],
-      "userId": "lch"
-    }
-  ],
-  "test": [
-    {
-      "id": "1",
-      "title": "Happy",
-      "url": "/static/gifs/happy.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
-      "tags": [
-        "happy",
-        "smile",
-        "joy"
-      ],
-      "userId": "test"
-    },
-    {
-      "id": "2",
-      "title": "Thumbs Up",
-      "url": "/static/gifs/thumbs-up.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
-      "tags": [
-        "thumbs",
-        "up",
-        "good",
-        "approve"
-      ],
-      "userId": "test"
-    },
-    {
-      "id": "3",
-      "title": "Clap",
-      "url": "/static/gifs/clap.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
-      "tags": [
-        "clap",
-        "applause",
-        "good job"
-      ],
-      "userId": "test"
-    }
-  ],
-  "daeun": [
-    {
-      "id": "1",
-      "title": "Happy",
-      "url": "/static/gifs/happy.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/happy.gif",
-      "tags": [
-        "happy",
-        "smile",
-        "joy"
-      ],
-      "userId": "daeun"
-    },
-    {
-      "id": "2",
-      "title": "Thumbs Up",
-      "url": "/static/gifs/thumbs-up.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/thumbs-up.gif",
-      "tags": [
-        "thumbs",
-        "up",
-        "good",
-        "approve"
-      ],
-      "userId": "daeun"
-    },
-    {
-      "id": "3",
-      "title": "Clap",
-      "url": "/static/gifs/clap.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/clap.gif",
-      "tags": [
-        "clap",
-        "applause",
-        "good job"
-      ],
-      "userId": "daeun"
-    },
-    {
-      "id": "be2bda6f-5709-4849-8819-c99c3f61f842",
-      "title": "gun",
-      "url": "/static/gifs/daeun_be2bda6f-5709-4849-8819-c99c3f61f842_20250725_151508.gif",
-      "thumbnailUrl": "/static/gifs/thumbnails/daeun_be2bda6f-5709-4849-8819-c99c3f61f842_20250725_151508_thumb.gif",
-      "tags": [
-        "uploaded",
-        "custom"
-      ],
-      "userId": "daeun"
     }
   ]
 }
